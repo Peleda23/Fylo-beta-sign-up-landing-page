@@ -1,2 +1,105 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:700");
+body {
+  margin: 0;
+}
+
+.wrapper1 {
+  min-width: 375px;
+  height: 445px;
+  background-image: url(bg-intro.svg);
+}
+
+.wrapper1 .icons {
+  height: 20px;
+  width: 20px;
+}
+
+.wrapper1 .logo {
+  height: 23px;
+}
+
+.wrapper1 .box1 {
+  padding: 20px 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper1 .box2 {
+  text-align: center;
+}
+
+.wrapper1 .box2 img {
+  width: 70%;
+}
+
+.wrapper2 {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 10% 0 10%;
+}
+
+.wrapper2 h1 {
+  font-family: "Raleway", sans-serif;
+}
+
+.wrapper2 p {
+  font-family: "Open Sans", sans-serif;
+  color: gray;
+  font-size: 15px;
+}
+
+.wrapper2 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper2 form h1 {
+  font-size: 17px;
+}
+
+.wrapper2 form input[type="text"] {
+  height: 30px;
+  border-radius: 4px;
+  -webkit-box-shadow: -2px 0px 6px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: -2px 0px 6px 2px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+.wrapper2 form button {
+  border: none;
+  color: white;
+  background: #05d69b;
+  height: 30px;
+  width: 30%;
+  margin-top: 20px;
+  -webkit-box-shadow: -2px 0px 6px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: -2px 0px 6px 2px rgba(0, 0, 0, 0.15);
+  font-family: "Open Sans", sans-serif;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.wrapper2 a {
+  text-align: end;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  padding: 40px 0 20px 0;
+}
 /*# sourceMappingURL=styles.css.map */

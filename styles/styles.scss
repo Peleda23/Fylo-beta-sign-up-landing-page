@@ -7,5 +7,85 @@ $colors: (
   gray: hsl(0, 0%, 50%)
 );
 
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
 $heading: 'Raleway', sans-serif;
 $body: 'Open Sans', sans-serif;
+
+body {
+  margin: 0;
+}
+
+.wrapper1 {
+  min-width: 375px;
+  height: 445px;
+  background-image: url(bg-intro.svg);
+  .icons {
+    height: 20px;
+    width: 20px;
+  }
+  .logo {
+    height: 23px;
+  }
+  .box1 {
+    padding: 20px 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .box2 {
+    text-align: center;
+    img {
+      width: 70%;
+    }
+  }
+}
+
+.wrapper2 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10% 0 10%;
+  h1 {
+    font-family: $heading;
+  }
+  p {
+    font-family: $body;
+    color: color(gray);
+    font-size: 15px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 17px;
+    }
+    input[type="text"] {
+      height: 30px;
+      border-radius: 4px;
+      box-shadow: -2px 0px 6px 2px rgba(0,0,0,0.15);
+      border: none;
+    }
+    button {
+      border: none;
+      color: white;
+      background: color(green);
+      height: 30px;
+      width: 30%;
+      margin-top: 20px;
+      box-shadow: -2px 0px 6px 2px rgba(0,0,0,0.15);
+      font-family: $body;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+  }
+  a {
+    text-align: end;
+    color: black;
+    font-family: $body;
+    font-size: 10px;
+    padding: 40px 0 20px 0;
+  }
+}
