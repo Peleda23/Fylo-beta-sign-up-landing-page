@@ -3,23 +3,97 @@ body {
   margin: 0;
 }
 
-.wrapper1 {
-  min-width: 375px;
-  height: 445px;
-  background-image: url(bg-intro.svg);
+main {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "aa aa bb bb" "aa aa ee ee" "aa aa dd dd";
 }
 
-.wrapper1 .icons {
-  height: 20px;
-  width: 20px;
+main .box1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: bb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px;
 }
 
-.wrapper1 .logo {
-  height: 23px;
+main .box1 .box1-1 .logo {
+  height: 25px;
 }
 
-.wrapper1 .box1 {
-  padding: 20px 20px 0 20px;
+main .box1 .box2-1 img {
+  height: 22px;
+  width: 22px;
+  padding: 0 10px 0 10px;
+}
+
+main .box2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: aa;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#110a6d), color-stop(#413590), color-stop(#6a5fb3), color-stop(#928cd7), to(#bdbafa));
+  background-image: linear-gradient(to left bottom, #110a6d, #413590, #6a5fb3, #928cd7, #bdbafa);
+  height: 100vh;
+  width: 47vw;
+  text-align: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .box2 img {
+  height: 45%;
+}
+
+main .box3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: ee;
+  padding: 0 60px 0 60px;
+}
+
+main .box3 h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+}
+
+main .box3 p {
+  font-family: "Open Sans", sans-serif;
+  color: gray;
+  font-size: 15px;
+}
+
+main .box5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: dd;
+  padding: 0 60px 0 60px;
+}
+
+main .box5 h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+}
+
+main .box5 form .inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,78 +102,41 @@ body {
           justify-content: space-between;
 }
 
-.wrapper1 .box2 {
-  text-align: center;
-}
-
-.wrapper1 .box2 img {
-  width: 70%;
-}
-
-.wrapper2 {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0 10% 0 10%;
-}
-
-.wrapper2 h1 {
-  font-family: "Raleway", sans-serif;
-}
-
-.wrapper2 p {
-  font-family: "Open Sans", sans-serif;
-  color: gray;
-  font-size: 15px;
-}
-
-.wrapper2 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.wrapper2 form h1 {
-  font-size: 17px;
-}
-
-.wrapper2 form input[type="text"] {
-  height: 30px;
+main .box5 form input[type="text"] {
+  height: 45px;
+  width: 63%;
+  border: none;
+  -webkit-box-shadow: 10px 10px 33px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 33px -9px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
-  -webkit-box-shadow: -2px 0px 6px 2px rgba(0, 0, 0, 0.15);
-          box-shadow: -2px 0px 6px 2px rgba(0, 0, 0, 0.15);
-  border: none;
 }
 
-.wrapper2 form button {
+main .box5 form button {
+  margin-left: 20px;
+  height: 45px;
+  width: 30%;
+  -webkit-box-shadow: 10px 10px 33px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 33px -9px rgba(0, 0, 0, 0.75);
   border: none;
+  border-radius: 4px;
   color: white;
   background: #05d69b;
-  height: 30px;
-  width: 30%;
-  margin-top: 20px;
-  -webkit-box-shadow: -2px 0px 6px 2px rgba(0, 0, 0, 0.15);
-          box-shadow: -2px 0px 6px 2px rgba(0, 0, 0, 0.15);
-  font-family: "Open Sans", sans-serif;
-  border-radius: 4px;
+  font-size: 15px;
   font-weight: 700;
-  font-size: 13px;
 }
 
-.wrapper2 a {
-  text-align: end;
+main .box5 a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 130px 0 0 60px;
   color: black;
-  font-family: "Open Sans", sans-serif;
-  font-size: 10px;
-  padding: 40px 0 20px 0;
+  font-size: 14px;
 }
 /*# sourceMappingURL=styles.css.map */

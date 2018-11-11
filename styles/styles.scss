@@ -13,79 +13,113 @@ $colors: (
 
 $heading: 'Raleway', sans-serif;
 $body: 'Open Sans', sans-serif;
+$padding: 60px;
+$desktop: 1000px; 
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}  
 
 body {
   margin: 0;
 }
 
-.wrapper1 {
-  min-width: 375px;
-  height: 445px;
-  background-image: url(bg-intro.svg);
-  .icons {
-    height: 20px;
-    width: 20px;
-  }
-  .logo {
-    height: 23px;
-  }
-  .box1 {
-    padding: 20px 20px 0 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .box2 {
-    text-align: center;
-    img {
-      width: 70%;
+main {
+  display: grid;
+  grid-template-areas: 
+    "aa aa bb bb"
+    "aa aa ee ee"
+    "aa aa dd dd";
+    .box1 {
+      grid-area: bb;
+      display: flex;
+      justify-content: space-between;
+      padding: $padding;
+      .box1-1 {
+        .logo {
+          height: 25px;
+        }
+      }
+      .box2-1 {
+        img {
+          height: 22px;
+          width: 22px;
+          padding:0 10px 0 10px;
+        }
+      }
     }
-  }
+    .box2 {
+      grid-area: aa;
+      background-image: linear-gradient(to left bottom, #110a6d, #413590, #6a5fb3, #928cd7, #bdbafa);
+      height: 100vh;
+      width: 47vw;
+      text-align: center;
+      align-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 45%;
+      }
+    }
+    .box3 {
+      grid-area: ee;
+      padding: 0 $padding 0 $padding;
+      h1 {
+        font-family: $heading;
+        font-size: 28px;
+      }
+      p {
+        font-family: $body;
+        color: color(grey);
+        font-size: 15px;
+      }
+    }
+    .box5 {
+      grid-area: dd;
+      padding: 0 $padding 0 $padding;
+      h1 {
+        font-family: $body;
+        font-size: 19px;
+      }
+      form {
+        .inputs {
+          display: flex;
+          justify-content: space-between;
+        }
+      input[type="text"] {
+        height: 45px;
+        width: 63%;
+        border: none;
+        box-shadow: 10px 10px 33px -9px rgba(0,0,0,0.75);
+        border-radius: 4px;
+      }
+      button {
+        margin-left: 20px;
+        height: 45px;
+        width: 30%;
+        box-shadow: 10px 10px 33px -9px rgba(0,0,0,0.75);
+        border: none;
+        border-radius: 4px;
+        color: white;
+        background: color(green);
+        font-size: 15px;
+        font-weight: 700;
+      }
+    }
+      a {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 130px 0 0 $padding;
+        color: black;
+        font-size: 14px;
+      }
+    }
 }
 
-.wrapper2 {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 10% 0 10%;
-  h1 {
-    font-family: $heading;
-  }
-  p {
-    font-family: $body;
-    color: color(gray);
-    font-size: 15px;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    h1 {
-      font-size: 17px;
-    }
-    input[type="text"] {
-      height: 30px;
-      border-radius: 4px;
-      box-shadow: -2px 0px 6px 2px rgba(0,0,0,0.15);
-      border: none;
-    }
-    button {
-      border: none;
-      color: white;
-      background: color(green);
-      height: 30px;
-      width: 30%;
-      margin-top: 20px;
-      box-shadow: -2px 0px 6px 2px rgba(0,0,0,0.15);
-      font-family: $body;
-      border-radius: 4px;
-      font-weight: 700;
-      font-size: 13px;
-    }
-  }
-  a {
-    text-align: end;
-    color: black;
-    font-family: $body;
-    font-size: 10px;
-    padding: 40px 0 20px 0;
-  }
-}
+
+
+
