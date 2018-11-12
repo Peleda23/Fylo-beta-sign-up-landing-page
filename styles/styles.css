@@ -9,6 +9,18 @@ main {
       grid-template-areas: "aa aa bb bb" "aa aa ee ee" "aa aa dd dd";
 }
 
+@media (max-width: 685px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 main .box1 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
@@ -23,8 +35,21 @@ main .box1 {
   padding: 60px;
 }
 
+@media (max-width: 685px) {
+  main .box1 {
+    padding: 20px;
+    position: absolute;
+  }
+}
+
 main .box1 .box1-1 .logo {
   height: 25px;
+}
+
+@media (max-width: 685px) {
+  main .box1 .box2-1 {
+    padding-left: 1px;
+  }
 }
 
 main .box1 .box2-1 img {
@@ -55,6 +80,12 @@ main .box2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 685px) {
+  main .box2 {
+    width: 100vw;
+  }
 }
 
 main .box2 img {
@@ -102,6 +133,15 @@ main .box5 form .inputs {
           justify-content: space-between;
 }
 
+@media (max-width: 685px) {
+  main .box5 form .inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 main .box5 form input[type="text"] {
   height: 45px;
   width: 63%;
@@ -109,6 +149,15 @@ main .box5 form input[type="text"] {
   -webkit-box-shadow: 10px 10px 33px -9px rgba(0, 0, 0, 0.75);
           box-shadow: 10px 10px 33px -9px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
+}
+
+@media (max-width: 685px) {
+  main .box5 form input[type="text"] {
+    width: 100%;
+    height: 30px;
+    -webkit-box-shadow: 1px 10px 24px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 10px 24px 0px rgba(0, 0, 0, 0.2);
+  }
 }
 
 main .box5 form button {
@@ -123,6 +172,15 @@ main .box5 form button {
   background: #05d69b;
   font-size: 15px;
   font-weight: 700;
+}
+
+@media (max-width: 685px) {
+  main .box5 form button {
+    margin: 20px 0 0 0;
+    height: 30px;
+    width: 40%;
+    font-size: 10px;
+  }
 }
 
 main .box5 a {
